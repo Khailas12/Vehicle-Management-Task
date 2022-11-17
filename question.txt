@@ -1,0 +1,15 @@
+Create CRUD for Vehicle management, Form will have the following fields:-
+
+Vehicle Number (Alpha numeric)
+Vehicle Type (options: Two, Three, Four wheelers)
+Vehicle Model (Text)
+Vehicle Description (Text)
+
+Create a user access management system. There will be three types of roles Super admin, Admin, and User. 
+Super admin can perform all the operations (CRUD), 
+Admin can perform Edit, View operation, 
+User can only view.
+
+The test should be performed using OOPs concept.
+
+Use sqllite database and also add requirements.txt file in the project.

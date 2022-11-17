@@ -1,0 +1,27 @@
+{% include 'multi_user/base.html'%}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+
+
+
+<div class="card text-center">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+        <form method="POST">
+            {% csrf_token %}
+      <h5 class="card-title">Delete Details</h5>
+      <p class="card-text">Are you want to delete this item ?.</p>
+      <br>
+
+      <input type="submit" class="btn btn-danger btn-lg " value="Yes" />
+            
+      <a href="{% url 'super_admin_page' %}" class="btn btn-success btn-lg "">No</a>
+      </div>
+  </div>
+
+
+{% endblock %}

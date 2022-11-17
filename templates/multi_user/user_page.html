@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <title>Super Admin page</title>
+</head>
+{%  include 'multi_user/base.html' %}
+
+<body>
+    <div class="col-md-11">
+
+        <div class="card card-body">
+            
+            <table class="table table-sm">
+                <tr>
+                    <th>Vehicle Number</th>  
+                    <th>Vehicle Type</th>  
+                    <th>Model</th>  
+                    <th>Desription</th>  
+                </tr>
+    
+                {% for data in dataset %}  
+                <tr>  
+                    <td>{{ data.vehicle_number }}</td>  
+                    <td>{{ data.vehicle_type }}</td>  
+                    <td>{{ data.vehicle_model }}</td>  
+                    <td>{{ data.vehicle_description }}</td>  
+    
+                    </tr>
+                {% endfor %}
+    
+        
+            </table>
+        </div>
+    </div>
+    
+    </div>
+
+
+</body>
+</html>

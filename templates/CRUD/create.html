@@ -1,0 +1,24 @@
+{% include 'multi_user/base.html'%}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+
+<div class="container contact-form">
+    <div class="form-group">
+    <form method="post">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-12">
+                {{form|crispy}}
+
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+              
+            <a href="{% url 'super_admin_page' %}" class="btn btn-success">Back</a>
+            </div>
+    </form>
+</div>
+
+{% endblock %}

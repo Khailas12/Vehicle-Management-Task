@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <title>Super Admin page</title>
+</head>
+{%  include 'multi_user/base.html' %}
+
+<body>
+    <div class="col-md-11">
+        <a class="btn btn-success btn-lg btn-block" href="{% url 'vehicle:create' %}">Add New Vehicle Details</a></td>
+        <br>
+
+        <div class="card card-body">
+            
+            <table class="table table-sm">
+                <tr>
+                    <th>Vehicle Number</th>  
+                    <th>Vehicle Type</th>  
+                    <th>Model</th>  
+                    <th>Desription</th>  
+                    <th>Update</th>
+                    <th>Remove</th>
+                </tr>
+    
+                {% for data in dataset %}  
+                <tr>  
+                    <td>{{ data.vehicle_number }}</td>  
+                    <td>{{ data.vehicle_type }}</td>  
+                    <td>{{ data.vehicle_model }}</td>  
+                    <td>{{ data.vehicle_description }}</td>  
+    
+                        <td><a class="btn btn-sm btn-info" href="{% url 'vehicle:update' data.id %}">Edit</a></td>
+    
+                        <td><a class="btn btn-sm btn-danger" href="{% url 'vehicle:delete' data.id %}">Delete</a></td>
+    
+                    </tr>
+                {% endfor %}
+    
+        
+            </table>
+        </div>
+    </div>
+    
+    </div>
+
+
+</body>
+</html>

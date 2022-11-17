@@ -1,0 +1,16 @@
+
+{% if user.is_authenticated %}
+<div class="alert alert-success" role="alert">
+    <h3>Welcome {{ user.username }}!</h3>
+    <a href="{% url 'vehicle:logout' %}">Logout?</a>
+</div>
+
+{% else %}
+
+<div class="alert alert-success" role="alert">
+    <h3>Welcome!</h3>
+    <a href="{% url 'vehicle:register' %}">Signup</a>
+    <a href="{% url 'vehicle:login' %}">Login</a>
+</div>
+
+{% endif %}
