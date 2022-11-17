@@ -19,21 +19,6 @@ def create(request):
     return render(request, "CRUD/create.html", context)
 
 
-
-# def read(request):
-#     context = {}
-#     context['dataset'] = models.VehicleModel.objects.all()
-#     return render(request, 'CRUD/read.html', context)
-
-
-# def user_read(request, id):
-#     context = {}
-#     obj = get_object_or_404(models.VehicleModel, id=id)
-    
-#     context['data'] = obj
-#     return render(request, 'CRUD/user_read.html', context)
-
-
 def update(request, id):
     context = {}
     
