@@ -8,6 +8,7 @@
 <div class="container contact-form">
     <div class="form-group">
     <form method="post">
+      <h3>Update Details</h3>
         {% csrf_token %}
         <div class="row">
           <div class="col-12">
@@ -26,9 +27,9 @@
             <button type="submit" class="btn btn-primary">Submit</button>
               
             {% if request.user.is_super_admin %}
-            <a href="{% url 'super_admin_page' %}" class="btn btn-success">Back</a>
+            <a href="{% url 'super_admin_page' %}" class="btn btn-success">Go Back <i class="fa-solid fa-circle-left"></i></a>
             {% elif request.user.is_admin %}
-            <a href="{% url 'admin_page' %}" class="btn btn-success">Back</a>
+            <a href="{% url 'admin_page' %}" class="btn btn-success">Go Back <i class="fa-solid fa-circle-left"></i></a>
             {% endif %}
             </div>
     </form>

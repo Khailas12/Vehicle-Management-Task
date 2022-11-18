@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.views.decorators.cache import never_cache
 from vehicle import models
+from django.views.decorators.csrf import ensure_csrf_cookie
+
 
 from . import forms
 
@@ -12,6 +14,7 @@ def index(request):
     return render(request, 'multi_user/index.html')
 
 
+@ensure_csrf_cookie
 def register(request):
     if request.method == 'POST':
         form = forms.SignUpForm(request.POST)

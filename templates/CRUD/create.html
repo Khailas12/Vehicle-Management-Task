@@ -6,8 +6,9 @@
 
 
 <div class="container contact-form">
-    <div class="form-group">
+  <div class="form-group">
     <form method="post">
+      <h3>Add New Details</h3>
             {% csrf_token %}
             <div class="row">
               <div class="col-12">
@@ -16,7 +17,7 @@
             
             <button type="submit" class="btn btn-primary">Submit</button>
               
-            <a href="{% url 'super_admin_page' %}" class="btn btn-success">Back</a>
+            <a href="{% url 'super_admin_page' %}" class="btn btn-success">Go Back <i class="fa-solid fa-circle-left"></i></a>
             </div>
     </form>
 </div>

@@ -27,7 +27,7 @@
                     <td>{{ data.vehicle_model }}</td>  
                     <td>{{ data.vehicle_description }}</td>  
     
-                        <td><a class="btn btn-sm btn-info" href="{% url 'vehicle:update' data.id %}">Edit</a></td>
+                        <td><a class="btn btn-sm btn-info" href="{% url 'vehicle:update' data.id %}">Edit <i class="fas fa-edit"></i></a></td>
     
                     </tr>
                 {% endfor %}

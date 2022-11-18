@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'crispy_forms',
+    'fontawesomefree',
     
     'account',
     'vehicle',

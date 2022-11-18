@@ -16,13 +16,13 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       {% if request.user.is_super_admin %}
-            <h1>Super Admin</h1>
+            <h1> <a href= "{% url 'super_admin_page' %}"> <i class="fa-solid fa-user-shield"> </i> Super Admin</i></a></h1>
 
         {% elif request.user.is_admin %}
-            <h1>Admin</h1>
+            <h1> <a href= "{% url 'admin_page' %}"> <i class="fa-solid fa-user-pen"></i> Admin</a></h1>
 
         {% elif request.user.is_user %}
-            <h1>User</h1>
+            <h1><i class="fa-solid fa-user"></i> User</h1>
 
         {% else %}
             <h1>Not Logged In</h1>
@@ -34,9 +34,7 @@
 
   {% if request.user.is_authenticated %}
     <div class="hello-msg">Hello, {{ request.user.username }}</div>
-    <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
-  {% else %}
-    <a class="btn btn-primary" href="{% url 'login_user' %}">Login</a>
+    <a class="btn btn-primary" href="{% url 'logout' %}">Logout <i class="fa-regular fa-right-from-bracket"></i></a>
   {% endif %}
 
 </nav>
