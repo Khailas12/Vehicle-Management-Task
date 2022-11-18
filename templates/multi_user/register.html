@@ -79,13 +79,20 @@
 
                         {% csrf_token %}
 
-                        <!-- {{ form.as_p }} -->
-
                         {% for field in form %}
 
                             {{ field.label }}
                             {{ field }}
-                        {% endfor %}
+							
+							<br>
+							{% if field.errors %}
+								<div class="alert alert-danger" role="alert">
+									{{ field.errors }}
+									Password shoud be a combination of minimum one Capital letter, number, Special character etc.
+								</div>
+							{% endif %}
+
+						{% endfor %}
 
 
 				   		<div class="d-flex justify-content-center mt-3 login_container">
@@ -93,7 +100,8 @@
 				   		</div>
 					</form>
 				</div>
-
+				
+				<br>
 				{% if messages %}
 					{% for message in messages %}
 						<div class="alert alert-danger" role="alert">
