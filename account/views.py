@@ -1,11 +1,11 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect, render
 from django.views.decorators.cache import never_cache
+from vehicle import models
 
 from . import forms
-from vehicle import models
 
 
 def index(request):
@@ -22,6 +22,8 @@ def register(request):
             messages.success(request, 'Account Created for ' + user)
             return redirect('login_user')
 
+        else:
+            messages.error(request, 'Invalid Credentials')
     else:
         form = forms.SignUpForm()
 
@@ -81,4 +83,5 @@ def user_page(request):
 
 def logout_user(request):
     logout(request)
+    messages.success(request, 'Logged out successfully')
     return redirect('login_user')

@@ -14,13 +14,14 @@
             {{form|crispy}}
     
         
-        {% if messages %}
-        <div id="messages">
-          {% for message in messages %}
-            {{ message }}
-          {% endfor %}
-        </div>
-      {% endif %}
+            {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-danger" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}	
+
       <br>
             <button type="submit" class="btn btn-primary">Submit</button>
               

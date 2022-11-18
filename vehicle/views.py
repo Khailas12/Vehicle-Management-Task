@@ -1,7 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
-
 
 from . import models, forms
 
@@ -26,9 +24,8 @@ def update(request, id):
     form = forms.VehicleForm(request.POST or None, instance=obj)
     
     if form.is_valid():
-        msg = messages.success(request, 'Vehicle Details Updated Successfully')
+        messages.success(request, 'Vehicle Details Updated Successfully')
         form.save()
-    
     
     context['form'] = form
     return render(request, "CRUD/update.html", context)
@@ -40,6 +37,7 @@ def delete(request, id):
     
     if request.method == 'POST':
         obj.delete()
+        messages.success(request, 'Vehicle Details Deleted Successfully')
         return redirect('super_admin_page')
     
     return render(request, 'CRUD/delete.html', context)
