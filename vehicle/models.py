@@ -16,9 +16,3 @@ class VehicleModel(models.Model):
         )
     vehicle_model = models.CharField(max_length=100)
     vehicle_description = models.TextField()
-
-
-class UserModel(models.Model):
-    name = models.TextField()
-    email = models.EmailField(max_length = 100)
-    password = models.CharField(max_length=100)
