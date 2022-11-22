@@ -47,4 +47,4 @@ Test `account` and `vehicle` apps separately:
 $ python manage.py test account
 $ python manage.py test vehicle
 ```
-Please refer to the [Django App Test Documentation](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing) and [Unit Test Documentation](https://mkdev.me/posts/how-to-cover-django-application-with-unit-tests) for more details.
+Please refer to the [Django App Test](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing) and [Unit Test](https://mkdev.me/posts/how-to-cover-django-application-with-unit-tests) Documentations for more details.
