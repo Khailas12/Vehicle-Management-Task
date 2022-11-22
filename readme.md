@@ -9,7 +9,7 @@ $ git clone https://github.com/Khailas12/Vehicle-Management-Task
 $ cd Vehicle-Management-Task
 ```
 
-Then install the dependencies:
+Install the dependencies:
 
 ```sh
 (env)$ pip install -r requirements.txt
@@ -42,4 +42,3 @@ $ python manage.py test account
 $ python manage.py test vehicle
 ```
 Please refer to the [Django App Test Documentation](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing) and [Unit Test Documentation](https://mkdev.me/posts/how-to-cover-django-application-with-unit-tests) for more details.
-
