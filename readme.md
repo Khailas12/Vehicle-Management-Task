@@ -36,8 +36,6 @@ And navigate to `http://127.0.0.1:8000/`.
 
 
 ## Tests
-
-To run the tests, `cd` into the directory where `manage.py` is:
 ```sh
 $ python manage.py test 
 ```
