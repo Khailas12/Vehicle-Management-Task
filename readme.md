@@ -1,5 +1,11 @@
 # Vehicle-Management-Task
 
+## Versions
+Django: `4.0.8`
+
+Python: `3.9.6`
+
+
 ## Setup
 
 Clone the repository:
@@ -8,8 +14,6 @@ Clone the repository:
 $ git clone https://github.com/Khailas12/Vehicle-Management-Task
 $ cd Vehicle-Management-Task
 ```
-
-Note: My Django Version is `4.0.8`
 
 Install the dependencies:
 
