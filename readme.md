@@ -36,11 +36,13 @@ And navigate to `http://127.0.0.1:8000/`.
 
 
 ## Tests
+
+Test both the apps simultaneously:
 ```sh
 $ python manage.py test 
 ```
 
-Seperate tests for `account` and `vehicle` apps:
+Test `account` and `vehicle` apps separately:
 ```sh
 $ python manage.py test account
 $ python manage.py test vehicle
