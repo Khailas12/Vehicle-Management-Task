@@ -18,7 +18,7 @@ $ cd Vehicle-Management-Task
 Install the dependencies:
 
 ```sh
-(env)$ pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 Once `pip` has finished downloading the dependencies:
