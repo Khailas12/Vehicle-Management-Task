@@ -37,7 +37,7 @@ And navigate to `http://127.0.0.1:8000/`.
 
 ## Tests
 
-Test both the apps simultaneously:
+Test all the apps simultaneously:
 ```sh
 $ python manage.py test 
 ```
